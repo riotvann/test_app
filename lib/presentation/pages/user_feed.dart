@@ -1,29 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:test_app/domain/user.dart';
 import 'package:test_app/presentation/pages/user_feed/bloc/user_feed_bloc.dart';
 import 'package:test_app/presentation/pages/user_feed/bloc/user_feed_state.dart';
 
 class UserFeed extends StatelessWidget {
-  UserFeed({super.key});
-
-  final userTest = User(
-      id: 1,
-      firstName: 'John',
-      lastName: 'Doe',
-      username: 'dondon',
-      email: 'johndoe@email.com',
-      gender: 'male',
-      pictureURL: "https://randomuser.me/api/portraits/men/1.jpg",
-      phone: 'phone',
-      birthday: DateTime.now(),
-      twitterHandle: 'twitterHandle');
+  const UserFeed({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('user feed'),
+        title: const Text('User feed'),
       ),
       body: Padding(
           padding: const EdgeInsets.all(10),
